@@ -189,7 +189,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="#" class="brand-link">
+            <a href="{{ route('home') }}" class="brand-link">
                 <img src="{{ asset('storage/' . $setting->logo) }}" alt="s"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">{{ $setting->nama_situs }}</span>
@@ -294,7 +294,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <form method="POST" action="{{ route('logout') }}">
+                            <a href="/user" class="nav-link {{ Request::is('user') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-cogs"></i>
+                                <p>
+                                    Setting {{ Auth::user()->username }}
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <form method="GET" action="{{ url('logout') }}">
                                 @csrf
                                 <button type="submit" class="nav-link">
                                     <i class="nav-icon fas fa-sign-out-alt"></i>

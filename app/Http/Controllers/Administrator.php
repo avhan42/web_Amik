@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Setting;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class Administrator extends Controller
@@ -13,5 +14,32 @@ class Administrator extends Controller
         return view('admin.home', compact('setting'));
     }
 
-    
+    public function list()
+    {
+        $setting = Setting::first();
+        $user = User::all();
+        return view('admin.user.list', compact('setting', 'user'));
+    }
+    public function edit($id)
+    {
+        $setting = Setting::first();
+        $user = User::find($id);
+        return view('admin.user.edit', compact('setting', 'user'));
+    }
+    // public function update(Request $request, $id)
+    // {
+    //     $user = User::find($id);
+    //     $user->username = $request->username;
+    //     $user->password = bcrypt($request->password);
+    //     $user->save();
+    //     return redirect()->route('user.list')->with('success', 'Data berhasil diubah');
+    // }
+    public function update(Request $request, $id)
+    {
+        $user = User::find($id);
+        $user->username = $request->username;
+        $user->password = bcrypt($request->password);
+        $user->save();
+        return redirect()->route('user.list')->with('success', 'Data berhasil diubah');
+    }
 }

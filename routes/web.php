@@ -41,6 +41,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::controller(Administrator::class)->group(function () {
             Route::get('administrator', 'index')->name('administrator');
             Route::get('home', 'index')->name('home');
+            Route::get('user', 'list')->name('user.list');
+            Route::get('user/create', 'create')->name('user.create');
+            Route::get('user/edit/{id}', 'edit')->name('user.edit');
+            Route::post('user/update/{id}', 'update')->name('user.update');
         });
         Route::resource('slider', SliderController::class);
         Route::resource('profile', ProfileController::class);
