@@ -19,7 +19,8 @@ class SliderController extends Controller
 
     public function create()
     {
-        return view('admin.slider_create');
+        $setting = Setting::first();
+        return view('admin.slider_create', compact('setting'));
     }
     public function store(Request $request)
     {
