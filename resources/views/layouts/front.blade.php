@@ -105,6 +105,9 @@
                             <a class="nav-link {{ Request::is('gallery/list') ? 'active' : '' }}"
                                 href="{{ url('gallery/list/') }}">Galeri</a>
                         </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Alumni</a>
+                        </li>
                     </ul>
                     <!-- Nav Main menu END -->
 

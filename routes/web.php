@@ -27,6 +27,7 @@ Route::controller(FrontEndController::class)->group(function () {
     Route::get('pengumuman/list', 'listpengumuman')->name('pengumuman.list');
     Route::get('berita/detail/{id}', 'detailberita')->name('berita.detail');
     Route::get('pengumuman/detail/{id}', 'detailpengumuman')->name('pengumuman.detail');
+    Route::get('gallery/list', 'listgallery')->name('gallery.list');
 });
 
 Route::controller(UserController::class)->group(function () {

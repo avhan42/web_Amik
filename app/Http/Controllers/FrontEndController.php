@@ -88,4 +88,10 @@ class FrontEndController extends Controller
         $post = Pengumuman::find($id);
         return view('frontend.pengumuman_detail', compact('setting', 'post'));
     }
+    public function listgallery()
+    {
+        $setting = Setting::first();
+        $galeri = Gallery::orderBy('created_at', 'desc')->paginate(10);
+        return view('frontend.gallery_list', compact('setting', 'galeri'));
+    }
 }
