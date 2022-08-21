@@ -47,7 +47,7 @@
                                     <tbody>
                                         @forelse($sliders as $data)
                                             <tr>
-                                                <td>{{ $data->iterasi }}</td>
+                                                <td>{{ $loop->iteration }}</td>
                                                 <td>
                                                     <img src="{{ asset('storage/' . $data->gambar) }}" width="60px">
                                                 </td>
