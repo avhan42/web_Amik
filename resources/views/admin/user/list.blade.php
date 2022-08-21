@@ -49,7 +49,7 @@
                                                 <td>{{ $data->username }}</td>
                                                 <td>..........</td>
                                                 <td>
-                                                    <form action="{{ url('user/hapus', $data->id) }}" method="POST">
+                                                    <form action="{{ url('user/delete', $data->id) }}" method="POST">
                                                         <a href="{{ url('user/edit', $data->id) }}"
                                                             class="btn btn-warning"><i class="fas fa-edit"></i></a>
                                                         @csrf

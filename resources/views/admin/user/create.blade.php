@@ -27,11 +27,11 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Edit Data User</h3>
+                                <h3 class="card-title">Tambah Data User</h3>
 
                             </div>
                             <!-- /.card-header -->
-                            <form class="form-horizontal" method="POST" action="{{ url('user/update', $user->id) }}">
+                            <form class="form-horizontal" method="post" action="{{ url('user/store') }}">
                                 @csrf
                                 {{-- @method('PUT') --}}
                                 <div class="card-body">
@@ -43,7 +43,7 @@
                                         <div class="col-sm-4">
                                             <input type="text"
                                                 class="form-control @error('username') is-invalid @enderror" name="username"
-                                                value="{{ $user->username }}">
+                                                value="{{ old('username') }}" placeholder="Masukkan Username" autofocus>
 
                                             @error('username')
                                                 <span class="invalid-feedback" role="alert">
@@ -57,7 +57,7 @@
                                         <div class="col-sm-10">
                                             <input type="password"
                                                 class="form-control @error('password') is-invalid @enderror" name="password"
-                                                value="{{ $user->password }}">
+                                                placeholder="Masukkan Password">
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -67,7 +67,7 @@
                                     </div>
                                     <!-- /.card-body -->
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-info">Update</button>
+                                        <button type="submit" class="btn btn-info">Simpan</button>
                                         <a href="#" onclick="history.back()"
                                             class="btn btn-default float-right">Cancel</a>
                                     </div>

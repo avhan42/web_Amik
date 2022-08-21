@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
 Route::controller(FrontEndController::class)->group(function () {
     Route::get('/', 'index');
     Route::get('profile/list', 'list')->name('profile.list');
@@ -45,6 +46,7 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('user/create', 'create')->name('user.create');
             Route::get('user/edit/{id}', 'edit')->name('user.edit');
             Route::post('user/update/{id}', 'update')->name('user.update');
+            Route::get('user/delete/{id}', 'delete')->name('user.delete');
         });
         Route::resource('slider', SliderController::class);
         Route::resource('profile', ProfileController::class);
