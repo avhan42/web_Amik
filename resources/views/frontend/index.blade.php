@@ -190,7 +190,7 @@
     {{-- End Pendidikan --}}
 
     <!-- =======================
-                                                                                                                                                                                                                                                                                                    Gallery START-->
+                                                                                                                                                                                                                                                                                                        Gallery START-->
     <section class="pt-0 pt-md-5">
         <div class="container">
             <!-- Title -->
@@ -319,7 +319,7 @@
         </div>
     </section>
     <!-- =======================
-                                                                                                                                                                                                                                                                                                    Gallery START-->
+                                                                                                                                                                                                                                                                                                        Gallery START-->
 
     {{-- Berita --}}
     <section class="pt-4">
@@ -487,7 +487,7 @@
     <!-- End Pengumuman -->
 
     <!-- =======================
-                                                                                                                                                                                                                                                                                                                                            Map START -->
+                                                                                                                                                                                                                                                                                                                                                Map START -->
     <section class="pt-0">
         <div class="container">
             <div class="row">
@@ -500,5 +500,5 @@
         </div>
     </section>
     <!-- =======================
-                                                                                                                                                                                                                                                                                                                                            Map END -->
+                                                                                                                                                                                                                                                                                                                                                Map END -->
 @endsection
