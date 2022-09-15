@@ -12,7 +12,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Pengumuman</li>
+                            <li class="breadcrumb-item active">User</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -49,7 +49,7 @@
                                                 <td>{{ $data->username }}</td>
                                                 <td>..........</td>
                                                 <td>
-                                                    <form action="{{ url('user/delete', $data->id) }}" method="POST">
+                                                    <form action="{{ url('user/destroy', $data->id) }}" method="POST">
                                                         <a href="{{ url('user/edit', $data->id) }}"
                                                             class="btn btn-warning"><i class="fas fa-edit"></i></a>
                                                         @csrf

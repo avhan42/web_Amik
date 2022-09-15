@@ -29,7 +29,7 @@
                             <div class="card-header">
                                 {{-- <h3 class="card-title">DataTable with default features</h3> --}}
                                 <a href="{{ route('pengumuman.create') }}" class="btn btn-info"><i
-                                        class="fas fa-plus-circle"></i> Tambah Data Pendidikan</a>
+                                        class="fas fa-plus-circle"></i> Tambah Data Pengumuman</a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">

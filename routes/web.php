@@ -46,7 +46,8 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('user/create', 'create')->name('user.create');
             Route::get('user/edit/{id}', 'edit')->name('user.edit');
             Route::post('user/update/{id}', 'update')->name('user.update');
-            Route::get('user/delete/{id}', 'delete')->name('user.delete');
+            Route::post('user/destory/{id}', 'destory')->name('user.destory');
+            Route::post('user/store', 'store')->name('user.store');
         });
         Route::resource('slider', SliderController::class);
         Route::resource('profile', ProfileController::class);

@@ -42,10 +42,15 @@ class Administrator extends Controller
         return redirect()->route('user.list')->with('success', 'Data berhasil diubah');
     }
 
-   public function delete($id)
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
+
+    public function destroy($id)
     {
         $user = User::find($id);
         $user->delete();
         return redirect()->route('user.list')->with('success', 'Data berhasil dihapus');
-    }
+    }    
 }
